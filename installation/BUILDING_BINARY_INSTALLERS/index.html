@@ -825,7 +825,7 @@
   
     <li class="md-nav__item">
       <a href="../INSTALL_INVOKE/" class="md-nav__link">
-        InvokeAI Installer
+        InvokeAI Binary Installer
       </a>
     </li>
   
@@ -854,6 +854,20 @@
     <li class="md-nav__item">
       <a href="../INSTALL_MANUAL/" class="md-nav__link">
         Manual Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../INSTALL_PATCHMATCH/" class="md-nav__link">
+        Installing PyPatchMatch
       </a>
     </li>
   
@@ -897,18 +911,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_10" type="checkbox" id="__nav_5_10" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_11" type="checkbox" id="__nav_5_11" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_5_10">
+        <label class="md-nav__link" for="__nav_5_11">
           Older docs to be removed
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Older docs to be removed" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_10">
+        <label class="md-nav__title" for="__nav_5_11">
           <span class="md-nav__icon md-icon"></span>
           Older docs to be removed
         </label>
@@ -1059,7 +1073,7 @@
 inside the InvokeAI git root folder, run the following commands:</p>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>conda activate invokeai # or however you activate python
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>pip install pip-tools
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>pip-compile --allow-unsafe --generate-hashes --output-file=installer/&lt;reqsfile&gt;.txt installer/requirements.in
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>pip-compile --allow-unsafe --generate-hashes --output-file=binary_installer/&lt;reqsfile&gt;.txt binary_installer/requirements.in
 </code></pre></div>
 where <code>&lt;reqsfile&gt;.txt</code> is whichever of
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>py3.10-darwin-arm64-mps-reqs.txt
@@ -1073,7 +1087,7 @@ matches the current OS and architecture.</p>
 </blockquote>
 <h2 id="3-set-github-repository-and-branch"><a name="step-3"></a> 3. Set github repository and branch<a class="headerlink" href="#3-set-github-repository-and-branch" title="Permanent link">#</a></h2>
 <p>Once all reqs files have been collected and committed <strong>to the branch
-to be installed</strong>, edit <code>installer/install.sh.in</code> and <code>installer/install.bat.in</code> so that <code>RELEASE_URL</code>
+to be installed</strong>, edit <code>binary_installer/install.sh.in</code> and <code>binary_installer/install.bat.in</code> so that <code>RELEASE_URL</code>
 and <code>RELEASE_SOURCEBALL</code> point to the github repo and branch that is
 to be installed.</p>
 <p>For example, to install <code>main</code> branch of <code>InvokeAI</code>, they should be
